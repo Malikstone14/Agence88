@@ -1,0 +1,18 @@
+easy_admin:
+  entities:
+    GH:
+      class: App\Entity\GH
+      label: "Groupement Hospitalier"
+      list:
+        fields:
+          - "id"
+          - "nom"
+          - "ghu.nom" # Accédez au nom du GHU associé
+      form:
+        fields:
+          - "nom"
+          - {
+              property: "ghu",
+              type: "entity",
+              type_options: { class: 'App\Entity\GHU' },
+            } # Sélectionnez un GHU existant
