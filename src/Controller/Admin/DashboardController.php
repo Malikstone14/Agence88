@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\Authorization\Voter\AuthenticatedVoter;
 class DashboardController extends AbstractDashboardController
 {
 
-    #[Route('/admin', name: 'admin')]
+    #[Route('/', name: 'admin')]
 
     #Permet d'afficher le dashboard uniquement si un utilisateur est connecté
 
